@@ -1,0 +1,6 @@
+:root {
+  --nav-padding-inline: 2rem;
+  --nav-padding-inline-mobile: 1rem;
+  --nav-height: 160px;
+  --nav-mobile-height: 110px;
+}

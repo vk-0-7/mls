@@ -1,0 +1,14 @@
+:root {
+  --main-hero-height: 100vh;
+  --secondary-hero-height: calc(100vh - 100px);
+  --tertiary-hero-heigh: calc(50vh - 100px);
+  --video-overlay-below-content-bottom-padding: 50px;
+
+  --hero-secondary-gap: 2rem;
+  --hero-secondary-h1-font-size: 3rem;
+  --hero-secondary-h1-font-weight: 500;
+  --hero-secondary-p-font-size: 1.2rem;
+  --hero-secondary-p-font-weight: 400;
+  --hero-secondary-p-letter-spacing: 0.05rem;
+  --hero-secondary-p-line-height: 1.7rem;
+}

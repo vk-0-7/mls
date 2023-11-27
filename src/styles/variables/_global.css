@@ -1,0 +1,23 @@
+:root {
+ 
+
+  /* COLORS START */
+  --primary-color: #fcbc4b;
+  --secondary-color: #18696f;
+  --tertiary-color: #fff;
+  --fourth-color: #343433;
+  /* COLORS END */
+
+  /* FOOTER STARTS */
+  /* FOOTER ENDS */
+
+  /* NAV STARTS */
+  /* NAV ENDS */
+
+  /* HERO STARTS */
+  /* HERO ENDS */
+
+  /* HOME */
+  --gap-between-content: 3rem;
+  /* HOME ENDS */
+}

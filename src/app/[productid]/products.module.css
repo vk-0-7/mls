@@ -1,0 +1,211 @@
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 0.8fr;
+  gap: 0.8rem;
+}
+
+.details,
+.carousel,
+.actions {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.details {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  padding-left: 2rem;
+}
+
+.actions {
+  padding-right: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.actions button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.buy_btn {
+  background: var(--primary);
+  color: var(--neutral);
+}
+
+.cart_btn {
+  background: var(--neutral);
+  border: 3px solid var(--primary) !important;
+  color: var(--primary);
+}
+
+.heading {
+  text-transform: capitalize;
+}
+
+.heading h1 {
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.heading span {
+  color: var(--secondary);
+}
+
+.description h3,
+.specification h3 {
+  text-transform: capitalize;
+  font-weight: 500;
+  color: var(--secondary);
+  padding-bottom: 5px;
+}
+
+.description p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.specification ul {
+  list-style: inside;
+}
+
+.variant {
+  height: 40px;
+  width: 100px;
+  padding-right: 3px;
+  border: 1px solid var(--body);
+  border-radius: 5px;
+}
+
+.variant select {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: white;
+  color: var(--neutral);
+}
+
+.variant select:focus {
+  outline: none;
+}
+
+.quantity_container {
+  height: fit-content;
+  width: 100px;
+  border: 1px solid var(--body);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  padding: 3px;
+}
+
+.quantity_container div {
+  height: 100%;
+  aspect-ratio: 1.15/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qc_decrease,
+.qc_increase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: var(--secondary);
+  cursor: pointer;
+}
+
+.qc_increase {
+  background: var(--primary);
+}
+
+.qc_decrease svg path,
+.qc_increase svg path {
+  fill: white;
+}
+
+.qc_fade {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mob_heading {
+  display: none;
+}
+
+.offer {
+  color: var(--primary);
+}
+
+.coupon {
+  color: grey;
+}
+
+@media screen and (max-width: 425px) {
+  .main {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-inline: var(--website-padding-mobile);
+  }
+
+  .mob_heading {
+    display: block;
+  }
+
+  .mob_heading span {
+    color: grey;
+  }
+
+  .mob_heading h1 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+
+  .heading {
+    display: none;
+  }
+
+  .carousel {
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .details {
+    gap: 1rem;
+    padding-left: 0rem;
+  }
+
+  .quantity_container div {
+    width: 100%;
+  }
+
+  .actions {
+    grid-row: 2/3;
+    padding-right: 0rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
