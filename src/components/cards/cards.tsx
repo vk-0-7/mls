@@ -28,10 +28,7 @@ const cards = ({ data, type }: any) => {
         </div>
       )}
       {type == "product_card" && (
-        <div
-          className={styles.card_main}
-          onClick={() => router.push("/" + data?._id)}
-        >
+        <div className={styles.card_main}>
           <div className={styles.cardImage}>
             {" "}
             <Image
@@ -55,22 +52,11 @@ const cards = ({ data, type }: any) => {
               <h4> ₹{data?.pricing?.price} </h4>
             </div>
             <p>{cropString(data?.title, 25)}</p>
-            <div className={styles.btn_group}>
-              <div className={styles.quantity_container}>
-                <div className={`${styles.qc_decrease} `}>
-                  <Minus />
-                </div>
-                <div className={styles.qc_value}>
-                  {/* {numToString(quantity, 2)} */}2
-                </div>
-                <div
-                  className={styles.qc_increase}
-                  // onClick={() => setQuantity((prev) => prev + 1)}
-                >
-                  <Add />
-                </div>
-              </div>
-              <button> Add to Cart </button>
+            <div
+              className={styles.btn_group}
+              onClick={() => router.push("/" + data?._id)}
+            >
+              <button> View Details </button>
             </div>
           </div>
         </div>

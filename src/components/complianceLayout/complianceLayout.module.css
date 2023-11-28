@@ -1,0 +1,66 @@
+.container {
+  height: fit-content;
+  width: 100vw;
+  padding: 0px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+.left_container {
+  width: 30vw;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.left_container h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.left_container ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.left_container ul li {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 300;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.left_container ul li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width 0.3s ease-in;
+}
+
+.left_container ul li:hover::after {
+  width: 100%;
+}
+
+.active::after {
+  width: 100% !important;
+}
+
+.right_container {
+  flex-grow: 1;
+  min-height: 100vh;
+  padding: 70px 50px;
+}

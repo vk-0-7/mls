@@ -1,22 +1,28 @@
-.normal_card_carousel,
-.best_sellers {
+.normal_card_carousel {
   padding-block: 5vh;
   /* border: 1px solid red; */
 }
-.normal_card_carousel h1,
-.best_sellers h1 {
+.normal_card_carousel h1 {
   text-align: center;
   margin-bottom: 3vh;
 }
-.rings_carousel,
-.necklace_carousel {
+.product_carousel {
   padding-block: 5vh;
   padding-inline: var(--margin-inline-laptop);
   /* border: 1px solid red; */
 }
-.rings_carousel h1,
-.necklace_carousel h1 {
+.product_carousel h1 {
   margin-bottom: 3vh;
   margin-left: 1vw;
-  text-align: center;
+  font-size: 1.85rem !important;
+  /* text-align: center; */
+}
+.static_section {
+  padding-inline: var(--margin-inline-laptop);
+}
+
+.static_section img {
+  height: auto;
+  width: 100%;
+  border-radius: 20px;
 }

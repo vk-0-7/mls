@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "@splidejs/react-splide/css";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+
 import Image from "next/image";
 import styles from "./carousel.module.css";
 import Link from "next/link";
@@ -9,6 +9,7 @@ import Button from "../Buttons/buttons";
 import { useRouter } from "next/router";
 
 // import { MapCollectionToName, titleCase } from "@/utils";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 type props = {
   data: any;
