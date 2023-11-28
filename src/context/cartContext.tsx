@@ -75,7 +75,7 @@ const CartContextProvider = ({ children }: any) => {
     }
   };
 
-  const addToCart = (data: any, variants: any, quantity: any) => {
+  const addToCart = (data: any, quantity: any) => {
     const date = new Date();
     const year = date.getFullYear();
     const month =
@@ -91,13 +91,6 @@ const CartContextProvider = ({ children }: any) => {
     if (localStorage.getItem("session_token")) {
       toast.promise(
         new Promise((resolve, reject) => {
-          const temp_var = Object.keys(variants).map((val) => {
-            return {
-              options_name: val,
-              options_value: variants[val],
-            };
-          });
-
           api({
             url: `carts`,
             method: "post",
@@ -109,7 +102,6 @@ const CartContextProvider = ({ children }: any) => {
                   productId: data._id,
                   quantity: quantity,
                   date: `${year}-${month}-${day}`,
-                  variant: temp_var,
                 },
               ],
             },
@@ -132,18 +124,10 @@ const CartContextProvider = ({ children }: any) => {
     }
     // if user is logged in then don't need to do anything because we can call getCart() to get updated cart from server
     else {
-      const temp_var = Object.keys(variants).map((val) => {
-        return {
-          options_name: val,
-          options_value: variants[val],
-        };
-      });
-
       const temp_cart_data = {
         productId: data,
         quantity: quantity,
         date: `${year}-${month}-${day}`,
-        variant: temp_var,
       };
 
       const temp_cart = [...cart, temp_cart_data];

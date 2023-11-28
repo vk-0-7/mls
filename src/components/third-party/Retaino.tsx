@@ -13,6 +13,7 @@ type Props = {
 
 const Retaino = (props: Props) => {
   const { key } = useKeyContext();
+  console.log(key);
 
   useEffect(() => {
     let iframe = document.getElementById("retaino-iframe") as HTMLIFrameElement;
@@ -41,6 +42,7 @@ const Retaino = (props: Props) => {
           "retaino-iframe"
         ) as HTMLIFrameElement;
         // @ts-ignore
+        // console.log(key);
         iframe.contentWindow?.postMessage(`website_token:${key}`, "*");
       }
       if (typeof e.data === "string") {

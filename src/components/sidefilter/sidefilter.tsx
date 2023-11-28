@@ -119,12 +119,12 @@ const Sidefilter = ({ selectedData, setSelectedData }: Props) => {
       return val;
     });
     // let variable=router.asPath;
-    router.push({
-      pathname: router.pathname,
-      query: router.query.id
-        ? { id: router.query.id, ...temp_query }
-        : { ...temp_query },
-    });
+    // router.push({
+    //   pathname: router.pathname,
+    //   query: router.query.id
+    //     ? { id: router.query.id, ...temp_query }
+    //     : { ...temp_query },
+    // });
   };
 
   // This below function push all values stored in selectedData in a array to display in active filter section.
@@ -252,20 +252,6 @@ const Sidefilter = ({ selectedData, setSelectedData }: Props) => {
     "Colors",
     "Dimension",
     "Price",
-  ];
-  const FilterData = [
-    ["Tableware", "Buffetware"],
-    // productSubCategory,
-    ["Daydream", "Earth Serve", "Serenity", "Grace", "Gourmet"],
-    // productSolutionData,
-    // colors,
-  ];
-  const FilterName = [
-    "productSubGroup1",
-    "productSubGroup3",
-    "productCollection",
-    "productSolution",
-    "colors",
   ];
 
   // const renderFilterContent = () => {

@@ -17,7 +17,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 const ProductDetail = (props: any) => {
-//   console.log(props.data);
+  //   console.log(props.data);
   const cart: any = useCartContext();
   const [loading, setLoading] = useState(true);
   const [data, setData]: any = useState({});
@@ -88,24 +88,22 @@ const ProductDetail = (props: any) => {
   //   };
 
   const addToCart = () => {
-    //     if (!checkForVariants()) {
-    //       toast.error("Please select all variants");
-    //       return;
-    //     } else {
-    //       cart.addToCart(data, variants, quantity);
-    //     }
+    console.log("called");
+    console.log(quantity);
+    cart.addToCart(data, quantity);
   };
 
   const checkForCart = () => {
-    // console.log(cart.cart);
-    // let found = cart.cart.find((val: any) => {
-    //   return val.productId?.seListing?.routeHandle === props.id;
-    // });
-    // if (found !== undefined) {
-    //   setAlreadyAddedToCart(true);
-    // } else {
-    //   setAlreadyAddedToCart(false);
-    // }
+    // console.log(props);
+    // console.log(cart.cart[0].productId);
+    let found = cart.cart.find((val: any) => {
+      return val.productId._id === props.data?._id;
+    });
+    if (found !== undefined) {
+      setAlreadyAddedToCart(true);
+    } else {
+      setAlreadyAddedToCart(false);
+    }
   };
 
   const handleBuyBtn = () => {
@@ -164,7 +162,7 @@ const ProductDetail = (props: any) => {
           <div className={styles.main}>
             <div className={styles.details}>
               <div className={styles.heading}>
-                <span>{data.category}</span>
+                <span>{data?.category}</span>
                 <h1>{data?.title}</h1>
               </div>
 
@@ -177,7 +175,7 @@ const ProductDetail = (props: any) => {
                 ></p>
               </div>
 
-              {data.specifications.length !== 0 && (
+              {data?.specifications?.length !== 0 && (
                 <div className={styles.specification}>
                   <h3>specification</h3>
                   <ul>

@@ -1,8 +1,10 @@
-.normal_card_carousel {
+.normal_card_carousel,
+.best_sellers {
   padding-block: 5vh;
   /* border: 1px solid red; */
 }
-.normal_card_carousel h1 {
+.normal_card_carousel h1,
+.best_sellers h1 {
   text-align: center;
   margin-bottom: 3vh;
 }
@@ -16,4 +18,5 @@
 .necklace_carousel h1 {
   margin-bottom: 3vh;
   margin-left: 1vw;
+  text-align: center;
 }

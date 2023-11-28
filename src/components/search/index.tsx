@@ -4,6 +4,7 @@ import api from "@/api";
 import { useRouter } from "next/navigation";
 import Close from "@/assets/Icons/cross.svg";
 import SearchIcon from "@/assets/Icons/nav/search.svg";
+import { hero_data } from "@/data/data";
 
 type Props = {
   open: boolean;
@@ -102,58 +103,7 @@ const Search = (props: Props) => {
                         />
                         <p>chocolate cakes</p>
                       </div>
-                      <div
-                        className={styles.default_category}
-                        onClick={() => {
-                          props.onClose();
-                          router.push("/products?category=elementary+cakes");
-                        }}
-                      >
-                        <img
-                          src="https://source.unsplash.com/random/500x500/?cake"
-                          alt=""
-                        />
-                        <p>elementary cakes</p>
-                      </div>
-                      <div
-                        className={styles.default_category}
-                        onClick={() => {
-                          props.onClose();
-                          router.push("/products?category=cheesecake");
-                        }}
-                      >
-                        <img
-                          src="https://source.unsplash.com/random/500x500/?cake"
-                          alt=""
-                        />
-                        <p>cheesecakes</p>
-                      </div>
-                      <div
-                        className={styles.default_category}
-                        onClick={() => {
-                          props.onClose();
-                          router.push("/products?category=savouries");
-                        }}
-                      >
-                        <img
-                          src="https://source.unsplash.com/random/500x500/?cake"
-                          alt=""
-                        />
-                        <p>savouries</p>
-                      </div>
-                      <div
-                        className={styles.default_category}
-                        onClick={() => {
-                          props.onClose();
-                          router.push("/products?category=cookies");
-                        }}
-                      >
-                        <img
-                          src="https://source.unsplash.com/random/500x500/?cake"
-                          alt=""
-                        />
-                        <p>cookies</p>
-                      </div>
+
                       <div
                         className={styles.default_category}
                         onClick={() => {

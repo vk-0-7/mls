@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { ContextProvider } from "@/context/context";
+import { KyeContextProvider } from "@/components/third-party/context/keyContext";
+import { CartContextProvider } from "@/context/cartContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,11 +21,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ContextProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </ContextProvider>
+        <KyeContextProvider>
+          <CartContextProvider>
+            <ContextProvider>
+              <Navbar />
+              {children}
+              <Footer />
+            </ContextProvider>
+          </CartContextProvider>
+        </KyeContextProvider>
       </body>
     </html>
   );

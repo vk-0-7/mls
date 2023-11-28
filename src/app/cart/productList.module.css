@@ -1,0 +1,147 @@
+.container {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.product {
+  height: 200px;
+  padding: 20px 10px;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+}
+
+.img {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background: grey;
+  position: relative;
+}
+
+.img img {
+  object-fit: cover;
+}
+
+.left {
+  display: flex;
+  gap: 10px;
+  text-transform: capitalize;
+  flex: 1;
+}
+
+.product_category {
+  color: grey;
+}
+
+.about_product {
+  display: flex;
+  flex-direction: column;
+}
+
+.about_product h2 {
+  font-weight: 500;
+}
+
+.right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.right h2 {
+  font-weight: 500;
+}
+
+.right svg {
+  cursor: pointer;
+}
+
+.right svg path {
+  fill: red;
+}
+
+.variants {
+  list-style: none;
+}
+
+.quantity_container {
+  height: fit-content;
+  width: 100px;
+  border: 1px solid var(--body);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  padding: 3px;
+  margin-top: 15px;
+}
+
+.quantity_container div {
+  height: 100%;
+  aspect-ratio: 1.15/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qc_decrease,
+.qc_increase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: var(--secondary);
+  cursor: pointer;
+}
+
+.qc_increase {
+  background: var(--primary);
+}
+
+.qc_decrease svg path,
+.qc_increase svg path {
+  fill: white;
+}
+
+.qc_fade {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 425px) {
+  .img {
+    height: 70%;
+  }
+
+  .product_category {
+    font-size: 0.8rem;
+  }
+
+  .about_product h2 {
+    font-size: 1.2rem;
+  }
+
+  .variants li {
+    font-size: 0.8rem;
+  }
+
+  .quantity_container {
+    height: 35px;
+    width: 100px;
+  }
+
+  .quantity_container div {
+    height: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  .right h2 {
+    font-size: 1.3rem;
+  }
+}

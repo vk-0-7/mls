@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Add from "@/assets/Icons/add.svg";
 import Minus from "@/assets/Icons/minus.svg";
+import { useCartContext } from "@/context/cartContext";
 // import oreenlogo from "../../public/Images/product_logo.webp";
 // import noimage from "../../public/Images/noimage.webp";
 import styles from "./cards.module.css";
@@ -12,6 +13,8 @@ import { capatalize, cropString } from "@/utils/utils";
 // import { titleCase } from "@/utils";
 
 const cards = ({ data, type }: any) => {
+  const { cart, deleteFromCart, updateCart }: any = useCartContext();
+
   const router = useRouter();
   console.log("received data : :: : : ", type, data);
   return (

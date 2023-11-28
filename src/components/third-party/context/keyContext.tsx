@@ -22,6 +22,7 @@ const KyeContextProvider = ({ children }: any) => {
       },
     })
       .then((res) => {
+        console.log(res.data);
         setKey(res.data.key);
       })
       .catch((error) => {

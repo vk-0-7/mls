@@ -24,7 +24,7 @@ const Navbar = () => {
   const [modal, setModal] = useState(false);
   const [menu, setMenu] = useState(false);
   const { cart, localToCloud }: any = useCartContext();
-
+  console.log(cart);
   const handleIconClick = (icon: any) => {
     if (icon.title === "search") {
       setSearchModal(true);
@@ -32,7 +32,7 @@ const Navbar = () => {
 
     if (icon.title === "cart" && cart?.length === 0) {
       setCartModal(true);
-    } else if (icon.title === "cart" && cart.length > 0) {
+    } else if (icon.title === "cart" && cart?.length > 0) {
       router.push("/cart");
     }
   };

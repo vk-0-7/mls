@@ -1,0 +1,124 @@
+.container {
+  min-height: calc(100vh - 160px);
+  padding-inline: var(--website-padding-desktop);
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--body);
+}
+
+.head h1 {
+  font-weight: 500;
+  color: var(--body);
+}
+
+.head button {
+  height: 45px;
+  width: 200px;
+  background: var(--primary);
+  border: none;
+  font-size: 1.1rem;
+  color: var(--neutral);
+  cursor: pointer;
+}
+
+.loading_btn {
+  height: 45px;
+  width: 200px;
+  background-color: var(--primary);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: not-allowed;
+}
+
+.loading_btn span {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #000;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container {
+    min-height: calc(100vh - 160px);
+    padding-inline: var(--website-padding-mobile);
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--body);
+  }
+
+  .head h1 {
+    font-weight: 500;
+    color: var(--body);
+    margin-bottom: 20px;
+  }
+
+  .head button {
+    height: 45px;
+    width: 200px;
+    background: var(--primary);
+    border: none;
+    font-size: 1.1rem;
+    color: var(--body);
+    cursor: pointer;
+  }
+
+  .loading_btn {
+    height: 45px;
+    width: 200px;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: not-allowed;
+  }
+
+  .loading_btn span {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #000;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
