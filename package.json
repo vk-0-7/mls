@@ -12,11 +12,13 @@
     "@splidejs/react-splide": "^0.7.12",
     "@svgr/webpack": "^8.1.0",
     "antd": "^5.11.4",
+    "axios": "^1.6.2",
     "dotenv": "^16.3.1",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
     "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.12.0",
     "react-image-magnify": "^2.7.4",
     "react-slider": "^2.0.6",
     "react-toastify": "^9.1.3"
